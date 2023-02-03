@@ -84,6 +84,7 @@ h1 {
     border-radius: 0.5rem;
     height: 3rem;
     transition: 0.2s ease;
+    cursor: pointer;
 }
 
 .tip-option.active {
@@ -112,6 +113,7 @@ h1 {
 #total-value {
     color: var(--strong-cyan);
     font-size: 2.25rem;
+    transition: 0.2s ease;
 }
 
 input {
@@ -123,6 +125,18 @@ input {
     border-radius: 0.5rem;
     padding: 1rem;
     text-align: right;
+    font-family: 'Space Mono', monospace;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
 }
 
 input:focus {
@@ -172,6 +186,7 @@ input.error {
     cursor: pointer;
     transition: 0.3s ease;
 }
+
 
 .btn:hover {
     background-color: var(--light-grayish-cyan);

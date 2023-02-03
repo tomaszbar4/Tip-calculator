@@ -4,27 +4,34 @@ const bill = document.querySelector('.bill');
 const peopleNumber = document.querySelector('.people-number');
 const errorText = document.querySelector('.error-text');
 
+bill.addEventListener('keyup', () => {
+    calculateTip()
+});
+peopleNumber.addEventListener('keyup', () => {
+    calculateTip()
+});
 
 const btn = document.querySelector('.btn');
-const submit = document.querySelector('.submit');
 
 tipOptions.forEach((tip, index) => {
     tip.addEventListener('click', () => {
         removeActive();
-        tipOptions[5].value = '';
         tip.classList.add('active');
         if (index <= 4) {
             tipAmount = tip.getAttribute('data-value');
+            tipOptions[5].value = '';
         }
         else {
             tipAmount = tip.value / 100;
         }
+        calculateTip();
     })
 })
 
-tipOptions[5].addEventListener('change', () => {
+tipOptions[5].addEventListener('keyup', () => {
     removeActive();
     tipAmount = tipOptions[5].value / 100;
+    calculateTip();
 })
 
 function removeActive() {
@@ -34,7 +41,6 @@ function removeActive() {
 }
 
 btn.addEventListener('click', reset);
-submit.addEventListener('click', calculateTip);
 
 function reset() {
     tipFinalAmount = 0;
@@ -60,9 +66,6 @@ function calculateTip() {
         totalAmount = billAmount / numberOfPeople + tipFinalAmount;
         tipValue.textContent = '$' + tipFinalAmount.toFixed(2);
         totalValue.textContent = '$' + totalAmount.toFixed(2);
-        bill.value = '';
-        tipOptions[5].value = '';
-        peopleNumber.value = '';
         removeError();
     }
 

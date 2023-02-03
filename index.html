@@ -17,7 +17,7 @@
   <div class="container">
     <div class="white-container">
       <div class="label">Bill</div>
-      <input type="text" name="bill" class="bill">
+      <input type="number" name="bill" class="bill">
 
       <div class="label">Select Tip %</div>
 
@@ -27,11 +27,11 @@
         <div class="tip-option" data-value="0.15">15%</div>
         <div class="tip-option" data-value="0.25">25%</div>
         <div class="tip-option" data-value="0.5">50%</div>
-        <input type="text" name="custom-tip" class="custom-tip" id="custom-tip" placeholder="Custom">
+        <input type="number" name="custom-tip" class="custom-tip" id="custom-tip" placeholder="Custom">
       </section>
 
-      <div class="label"><span>Number of People</span><span class="error-text error">Can't be zero</span></div>
-      <input type="text" name="people-number" class="people-number">
+      <div class="label"><span>Number of People</span><span class="error-text">Can't be zero</span></div>
+      <input type="number" name="people-number" class="people-number">
     </div>
 
     <aside class="green-container">
@@ -52,7 +52,6 @@
         </div>
       </div>
       <button class="btn">Reset</button>
-      <button class="submit">Submit</button>
     </aside>
   </div>
 
