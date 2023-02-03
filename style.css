@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root {
+
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --medium-blue: hsl(214, 11%, 27%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Overpass', sans-serif;
+    background-color: var(--very-dark-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: var(--white);
+}
+
+p {
+    color: var(--light-grey);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.result-container p {
+    text-align: center;
+}
+
+.container {
+    padding: 2rem;
+    background-color: var(--dark-blue);
+    width: 22rem;
+    border-radius: 1.25rem;
+}
+
+.result-container {
+    padding: 2rem;
+    background-color: var(--dark-blue);
+    width: 22rem;
+    border-radius: 1.25rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.result-container img {
+    width: 8rem;
+}
+
+.rating-result {
+    color: var(--orange);
+    font-size: 13px;
+    background-color: var(--medium-blue);
+    padding: 0.5rem 0.75rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.star {
+    background-color: var(--very-dark-blue);
+    width: max-content;
+    padding: 0.25rem;
+    border-radius: 50%;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin: 1.5rem 0 1rem 0;
+}
+
+.ratings-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.rating-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--medium-blue);
+    color: var(--white);
+    border-radius: 50%;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.rating-item.active {
+    background-color: var(--orange);
+}
+
+.rating-item:hover {
+    background-color: var(--medium-grey);
+    color: var(--white);
+}
+
+.btn {
+    width: 100%;
+    height: 2.5rem;
+    background-color: var(--orange);
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+    border-radius: 2rem;
+    border: 0;
+    margin-top: 2rem;
+    transition: 0.3s ease-in;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--white);
+    color: var(--orange);
+}
+
+.attribution {
+    display: none;
+}
